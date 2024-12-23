@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highseas Expense Tracker App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/119cd9cd4d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="shapes">
+
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="header">
+
+        <h1>Highseas Expense Tracker App</h1> </div>
+
+    </div>
+
+    <div class="info">
+        <div class="info-card">
+            <h3>Total Expenses <i class="fa-solid fa-money-bill-trend-up"></i></h3>
+            <div class="value" id="totalExpenses">₹0</div>
+        </div>
+
+        <div class="info-card">
+            <h3>Average Expense <i class="fa-solid fa-money-bill-transfer"></i></h3>
+
+            <div class="value" id="averageExpense">₹0</div>
+        </div>
+
+        <div class="info-card">
+            <h3>Total Items <i class="fa-solid fa-pen-to-square"></i></h3>
+            <div class="value" id="totalItems">0</div>
+        </div>
+    </div>
+
+    <form class="expense-form" id="expenseForm">
+
+        <div class="form-group">
+
+            <label for="description"> Description <i class="fa-solid fa-pen-nib fa-bounce"></i> &nbsp;</label>
+
+            <input type="text" id="description" placeholder="Where did you Spend On?" required>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="amount">Amount (₹) <i class="fa-solid fa-money-check-dollar fa-bounce"></i></label>
+            <input type="number" id="amount" min="0" step="1" required placeholder="Enter amount in rupees">
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="category">Category <i class="fa-solid fa-list fa-bounce"></i></label>
+
+            <select id="category" required>
+
+                <option value="">Select a category</option>
+
+                <option value="Food">Food & Dining</option>
+
+                <option value="Transport">Transport</option>
+
+                <option value="Shopping">Shopping</option>
+
+                <option value="Bills">Bills & Utilities</option>
+
+                <option value="Entertainment">Entertainment</option>
+
+                <option value="Health">Health</option>
+
+                <option value="Education">Education</option>
+
+                <option value="Others">Others</option>
+
+            </select>
+
+        </div>
+
+        <button type="submit" class="btn">Add Expense</button>
+        <p class="credit"> Made With 💙  By @Techgenius</p>
+
+    </form>
+
+    <div class="expenses-list" id="expensesList"></div>
+
+</div>
+
+    </form>
+<script src="script.js"></script>
+
+</body>
+</html>

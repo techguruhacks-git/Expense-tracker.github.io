@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body{
+
+    position:relative;
+        min-height: 100vh;
+        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); 
+           background-size: 400% 400%;
+    animation: animate 15s ease infinite;
+    overflow-x: hidden;
+}
+
+.shapes{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.shape{
+    position: absolute;
+    border-radius: 50%;
+    animation:  float 8s infinite;
+    opacity: 0.2;
+}
+
+.shape:nth-child(1){
+
+    width: 100px;
+    height: 100px;
+    background: #FF9933;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.shape:nth-child(2){
+
+    width: 150px;
+    height: 150px;
+    background: #138808;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.shape:nth-child(3){
+
+    width: 80px;
+    height: 80px;
+    background: #000080;
+    left: 30%;
+    top: 40%;
+    animation-delay: 4s;
+
+}
+.shape:nth-child(4){
+
+    width: 120px;
+    height: 120px;
+    background: #FF9933;
+    right: 25%;
+    top: 60%;
+    animation-delay: 6s;
+}
+.shape:nth-child(5){
+
+    width: 110px;
+    height: 110px;
+    background: #f70f6c;
+    right: 30%;
+    top: 40%;
+    animation-delay: 2s;
+}
+.shape:nth-child(6){
+
+    width: 90px;
+    height: 90px;
+    background: yellow;
+    right: 10%;
+    top: 30%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-100px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+
+@keyframes animate {
+
+0%{
+    background-position: 0% 50%;
+}    
+50%{
+    background-position: 100% 50%;
+}
+
+100%{
+    background-position: 0% 50%;
+}
+}
+
+.container{
+
+    position: relative;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    z-index: 1;
+
+}
+
+
+.header{
+
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #ffffffe6;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    animation: slideDown 0.5s ease;
+    border: 2px solid black;
+}
+
+.header h1{
+
+    color: #1a237e;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns:repeat(auto-fit, minmax(250px ), 1fr) ;
+
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 10px;
+
+}
+
+.info-card{
+    width: 200px;
+    height: 200px;
+    border: 3px dashed #f70f6c;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+    animation:  fadeIn 0.5s ease;
+    text-align: center;
+}
+
+.info-card:hover{
+    transform: translateY(-5px);
+}
+
+.info-card h3{
+    color: #1a237e;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+.info-card .value{
+   
+    font-size: 1.8rem;
+    color: #ff6b6b;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.expense-form{
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter:  blur(10px);
+    margin-bottom: 2rem;
+    animation: slideUp 0.5s ease;
+
+}
+
+.form-group{
+    margin-bottom: 1rem;
+
+}
+
+.form-group label{
+
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1a237e;
+    font-weight: 500;
+
+}
+
+.form-group label{
+
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1a237e;
+    font-weight: 500;
+
+}
+
+.form-group input,
+.form-group select{
+
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus{
+
+    border-color: #1a237e;
+    outline: none;
+}
+
+.btn{
+    background: #1a237e;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+
+    background: #283593;
+    transform: translateY(-2px);
+}
+
+.expense-list{
+
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    animation: fadeIn 0.5s ease;
+}
+
+.expense-item{
+    padding: 1.2rem;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 0.3s ease;
+    transition:  background-color 0.3s ease;
+}
+.expense-item:hover{
+    background-color: rgba(255, 255, 255, 0.95);
+
+}
+.expense-info h4{
+
+    color: #1a237e;
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.expense-info .category{
+
+    color: #666;
+    font-size: 0.9rem;
+
+}
+.expense-amount{
+
+    font-weight: bold;
+
+    color: #ff6b6b;
+    font-size: 1.1rem;
+}
+
+.delete-btn{
+
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.delete-btn:hover{
+
+    background: #ff6b6b;
+    transform: translateY(-2px);
+}
+
+
+@keyframes slideDown {
+
+    from{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideUp {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from{
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.credit{
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
