@@ -1,5 +1,8 @@
 # Expense-tracker.github.io
  
+Disclaimer: This project is made by Tutorial and I add some features and change the user interface also take help of AI to solve some error only.
+
+
 The Expense Tracker App helps you efficiently manage and track your expenses. with features such as persisetent data storage, expense count, category options and delete functionality . this app allows you to organize your finaances easily . The app also includes an engaging background color changing animation for a dynamic user experiences.
 
 Features:
